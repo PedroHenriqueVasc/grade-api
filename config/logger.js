@@ -15,8 +15,7 @@ const logger = createLogger({
     new transports.MongoDB({
       level: 'info',
       // db: process.env.MONGODB,
-      db:
-        'mongodb+srv://igtiUserDb:userpassword@cluster0.514id.mongodb.net/school?retryWrites=true&w=majority',
+      db: process.env.MONGODB,
       collection: 'logs_grades',
       capped: true,
       cappedMax: 20,
